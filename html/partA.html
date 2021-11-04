@@ -6,12 +6,549 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DBMS Mini Project</title>
     <link rel="stylesheet" href="../css/partA.css" />
+    <script src="../javascript/app.js"></script>
   </head>
 
   <body>
     <h1>
-      <center>Part A</center>
+      <center>Part I - Feedback System</center>
     </h1>
     <hr />
+    <form>
+      <label for="AcademicYear">Academic Year:</label>
+      <input type="text" id="AcademicYear" name="AcademicYear" />
+      <label for="Semester">Semester:</label>
+      <input type="text" id="Semester" name="Semester" />
+      <label for="dof">Date Of Feedback:</label>
+      <input type="text" id="dof" name="dof" />
+      <label for="Branch">Branch:</label>
+      <input type="text" id="Branch" name="Branch" />
+      <label for="Section">Section:</label>
+      <input type="text" id="Section" name="Section" />
+      <br /><br />
+      <hr />
+      <br /><br />
+      <table id="feedbackTable">
+        <thead>
+          <tr>
+            <th id="sno" style="width: 6%">S.No.</th>
+            <th id="description" style="width: 30%">Description</th>
+            <th id="subject" style="width: 64%" colspan="6">
+              Subject Name and Code
+            </th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td></td>
+          <td>Course Contents</td>
+          <td><input type="text" id="sub1" name="sub1" /></td>
+          <td><input type="text" id="sub2" name="sub2" /></td>
+          <td><input type="text" id="sub3" name="sub3" /></td>
+          <td><input type="text" id="sub4" name="sub4" /></td>
+          <td><input type="text" id="sub5" name="sub5" /></td>
+          <td><input type="text" id="sub6" name="sub6" /></td>
+        </tr>
+
+        <tr>
+          <td>1.</td>
+          <td>
+            Has the Teacher covered entire Syllabus as prescribed by University?
+            <br />
+            (Yes/No)
+          </td>
+          <td>
+            <select id="sub1Q1" name="sub1Q1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub2Q1" name="sub2Q1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub3Q1" name="sub3Q1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub4Q1" name="sub4Q1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub5Q1" name="sub5Q1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub6Q1" name="sub6Q1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2.</td>
+          <td>Effectiveness of Teacher in Terms of:</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>i.</td>
+          <td>Technical Content</td>
+          <td>
+            <select id="sub1Q2i" name="sub1Q2i">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub2Q2i" name="sub2Q2i">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub3Q2i" name="sub3Q2i">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub4Q2i" name="sub4Q2i">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub5Q2i" name="sub5Q2i">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub6Q2i" name="sub6Q2i">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>ii.</td>
+          <td>Communication Skills</td>
+          <td>
+            <select id="sub1Q2ii" name="sub1Q2ii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub2Q2ii" name="sub2Q2ii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub3Q2ii" name="sub3Q2ii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub4Q2ii" name="sub4Q2ii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub5Q2ii" name="sub5Q2ii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub6Q2ii" name="sub6Q2ii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>iii.</td>
+          <td>
+            Availability beyond normal classes <br />and co-operation to solve
+            individual <br />problems
+          </td>
+          <td>
+            <select id="sub1Q2iii" name="sub1Q2iii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub2Q2iii" name="sub2Q2iii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub3Q2iii" name="sub3Q2iii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub4Q2iii" name="sub4Q2iii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub5Q2iii" name="sub5Q2iii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub6Q2iii" name="sub6Q2iii">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>iv.</td>
+          <td>Pace on which contents were covered</td>
+          <td>
+            <select id="sub1Q2iv" name="sub1Q2iv">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub2Q2iv" name="sub2Q2iv">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub3Q2iv" name="sub3Q2iv">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub4Q2iv" name="sub4Q2iv">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub5Q2iv" name="sub5Q2iv">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub6Q2iv" name="sub6Q2iv">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>v.</td>
+          <td>Overall Effectiveness</td>
+          <td>
+            <select id="sub1Q2v" name="sub1Q2v">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub2Q2v" name="sub2Q2v">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub3Q2v" name="sub3Q2v">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub4Q2v" name="sub4Q2v">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub5Q2v" name="sub5Q2v">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub6Q2v" name="sub6Q2v">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>3.</td>
+          <td>How do you rate the contents of the curricular ?</td>
+          <td>
+            <select id="sub1Q3" name="sub1Q3">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub2Q3" name="sub2Q3">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub3Q3" name="sub3Q3">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub4Q3" name="sub4Q3">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub5Q3" name="sub5Q3">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub6Q3" name="sub6Q3">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>4.</td>
+          <td>How do you rate lab experiments, if applicable?</td>
+          <td>
+            <select id="sub1Q4" name="sub1Q4">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub2Q4" name="sub2Q4">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub3Q4" name="sub3Q4">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub4Q4" name="sub4Q4">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub5Q4" name="sub5Q4">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td>
+            <select id="sub6Q4" name="sub6Q4">
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>5.</td>
+          <td>Any Remarks</td>
+          <td><input type="text" id="sub1Q5" name="sub1Q5" /></td>
+          <td><input type="text" id="sub2Q5" name="sub2Q5" /></td>
+          <td><input type="text" id="sub3Q5" name="sub3Q5" /></td>
+          <td><input type="text" id="sub4Q5" name="sub4Q5" /></td>
+          <td><input type="text" id="sub5Q5" name="sub5Q5" /></td>
+          <td><input type="text" id="sub6Q5" name="sub6Q5" /></td>
+        </tr>
+      </table>
+      <br />
+      <h2>
+        <center>
+          (Rating : 5-Excellent, 4-Very Good, 3- Good, 2- Average, 1- Below
+          Average)
+        </center>
+      </h2>
+
+      <label for="AttendancePer">Attendance %: </label>
+      <input type="text" id="AttendancePer" name="AttendancePer" />
+      <br />
+      <br />
+      <label for="CGPA">CGPA:</label>
+      <input type="text" id="CGPA" name="CGPA" />
+      <br />
+      <br />
+    </form>
   </body>
 </html>

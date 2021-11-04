@@ -1,3 +1,26 @@
 body {
     font-family: monospace;
 }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center
+}
