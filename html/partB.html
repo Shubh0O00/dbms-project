@@ -7,460 +7,398 @@
     <title>DBMS Mini Project</title>
     <link rel="stylesheet" href="../css/partB.css" />
   </head>
-
   <body>
-    <h2>
-      <center><u>Application form for admission to B.Tech Programme</u></center>
-    </h2>
-    <p style="font-size: 18px">
-      Enter Details from here onwards <u>(ALL ENTRIES IN CAPITAL LETTERS)</u>
-    </p>
-    <form action="/action.php">
-      <label for="profile"> Upload recent photo: </label>
-      <input type="file" id="profile" name="profile" />
-      <br /><br />
+    <h2><center><u>Application form for admission to B.Tech Programme</u></center></h2>
+    <p style="font-size: 18px;">Enter Details from here onwards <u>(ALL ENTRIES IN CAPITAL LETTERS)</u></p>
+<form action="/action.php">
 
-      <label for="fname"> Name in English: </label>
-      <input type="text" id="fname" name="fname" />
-      <br /><br />
+<!----------------------------------INITIAL FORM STARTS----------------------------->     
 
-      <table cellpadding="4">
+    <label for="profile"> Upload recent photo: </label>
+    <input type="file" id="profile" name="profile">
+    <br><br>
+    
+    <label for="fname" > Name in English: </label>
+    <input type="text" id="fname" name="fname"> 
+    <br><br>
+    
+
+    <table cellpadding="4">   
         <tr>
-          <td>
-            <label for="gender">Gender: </label>
-            <select name="gender" id="gender">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-            <br /><br />
-          </td>
+            <td>
+                <label for="gender">Gender: </label>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <br><br>
+            </td>
 
-          <td>
-            <label for="blood">Blood group: </label>
-            <select name="blood" id="blood">
-              <option value="A+">A+</option>
-              <option value="A-">A-</option>
-              <option value="B+">B+</option>
-              <option value="B-">B-</option>
-              <option value="AB+">AB+</option>
-              <option value="AB-">AB-</option>
-              <option value="O+">O+</option>
-              <option value="O-">O-</option>
-            </select>
-            <br /><br />
-          </td>
+            <td>
+                <label for="blood">Blood group: </label>
+                <select name="blood" id="blood">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <br><br>
+            </td>
         </tr>
-      </table>
+    </table>
 
-      <label for="dob">Date of Birth: </label>
-      <input type="date" id="dob" name="dob" />
-      <br /><br />
+    <label for="dob">Date of Birth: </label>
+    <input type="date" id = "dob" name="dob">
+    <br><br>
 
-      <label for="contact">Mobile number: </label>
-      <input type="text" id="contact" name="contact" />
-      <br /><br />
+    <label for="contact">Mobile number: </label>
+    <input type="text" id="contact" name="contact">
+    <br><br>
 
-      <label for="emcontact">Emergency number: </label>
-      <input type="text" id="emcontact" name="emcontact" />
-      <br /><br />
+    <label for="emcontact">Emergency number: </label>
+    <input type="text" id="emcontact" name="emcontact">
+    <br><br>
 
-      <label for="email">Email: </label>
-      <input type="text" id="email" name="email" />
-      <br /><br />
+    <label for="email">Email: </label>
+    <input type="text" id="email" name="email">
+    <br><br>
 
-      <label for="aadhar">Aadhar: </label>
-      <input type="text" id="email" name="email" />
-      <br /><br />
+    <label for="aadhar">Aadhar: </label>
+    <input type="text" id="email" name="email">
+    <br><br>
 
-      <table cellpadding="4" bordercolor="black" border="1">
+    <table cellpadding="4" bordercolor="black" border="1">
         <tr>
-          <td>
+            <td>
             <label for="faname">Father's name: </label>
-            <input type="text" id="faname" name="faname" />
-          </td>
-          <td>
-            <label for="foccupation">Occupation: </label>
-            <input type="text" name="foccupation" id="foccupation" />
-          </td>
+            <input type="text" id="faname" name="faname">
+            </td>
+            <td>
+                <label for="foccupation">Occupation: </label>
+                <input type="text" name="foccupation" id="foccupation">
+            </td>
         </tr>
         <tr>
-          <td>
-            <label for="moname">Mother's name: </label>
-            <input type="text" id="moname" name="moname" />
-          </td>
-          <td>
-            <label for="moccupation">Occupation: </label>
-            <input type="text" name="moccupation" id="moccupation" />
-          </td>
+            <td>
+                <label for="moname">Mother's name: </label>
+                <input type="text" id="moname" name="moname">
+                </td>
+                <td>
+                    <label for="moccupation">Occupation: </label>
+                    <input type="text" name="moccupation" id="moccupation">
+                </td>
         </tr>
-      </table>
-      <br /><br />
+    </table>
+    <br><br>
 
-      <label for="branch">Branch: </label>
-      <select name="branch" id="branch">
+    <label for="branch">Branch: </label>
+    <select name="branch" id="branch">
         <option value="cse">CSE</option>
         <option value="ece">ECE</option>
-      </select>
-      <br /><br />
-      <label for="dis">Physical Disability: </label>
-      <select name="dis" id="dis">
+    </select>
+    <br><br>
+    <label for="dis">Physical Disability: </label>
+    <select name="dis" id="dis">
         <option value="Y">Yes</option>
         <option value="N">No</option>
-      </select>
-      <label for="discert"
-        >If Yes,attach verification report by IIITN committee.</label
-      >
-      <input type="file" id="discert" name="discert" />
-      <br /><br />
+    </select>
+    <label for="discert">If Yes,attach verification report by IIITN committee.</label>
+    <input type="file" id="discert" name="discert">
+    <br><br>
 
-      <h4><u>JEE Mains details: </u></h4>
-      <table border="1" cellpadding="4">
-        <tr>
-          <td>Round Allotment</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>JEE roll number</td>
-          <td>
-            <label for="jeeroll"></label>
-            <input type="text" name="jeeroll" id="jeeroll" />
-          </td>
-        </tr>
-        <tr>
-          <td>JEE AIR</td>
-          <td>
-            <label for="generalrank">General</label>
-            <input type="text" />
-            <label for="categoryrank">Category(If applicable)</label>
-            <input type="text" />
-          </td>
-        </tr>
-        <tr>
-          <td>Allotment Category:</td>
-          <td>
-            <label for="category"></label>
-            <select name="category" id="category">
-              <option value="Open">Open</option>
-              <option value="OBC">OBC</option>
-              <option value="SC">SC</option>
-              <option value="ST">ST</option>
-              <option value="PWD">PWD</option>
-              <option value="EWS">EWS</option>
-            </select>
-          </td>
-        </tr>
-      </table>
-      <br /><br />
 
-      <h4><u>Details of Fee payment: </u></h4>
-      <table border="1" cellpadding="4">
-        <tr>
-          <td>Sr. No</td>
-          <td>Details</td>
-          <td>DD/ECS no.</td>
-          <td>Date</td>
-          <td>Amount</td>
-        </tr>
-        <tr>
-          <td>1.</td>
-          <td>JOSAA 2021 councilling</td>
-          <td><label for="a"></label><input type="text" id="a" name="a" /></td>
-          <td><label for="b"></label><input type="text" id="b" name="b" /></td>
-          <td><label for="c"></label><input type="text" id="c" name="c" /></td>
-        </tr>
-        <tr>
-          <td>2.</td>
-          <td>At institute while reporting</td>
-          <td><label for="d"></label><input type="text" id="d" name="d" /></td>
-          <td><label for="e"></label><input type="text" id="e" name="e" /></td>
-          <td><label for="f"></label><input type="text" id="f" name="f" /></td>
-        </tr>
-        <tr>
-          <td>3.</td>
-          <td><b>Total Amount</b></td>
-          <td><label for="g"></label><input type="text" id="g" name="g" /></td>
-          <td><label for="h"></label><input type="text" id="h" name="h" /></td>
-          <td><label for="i"></label><input type="text" id="i" name="i" /></td>
-        </tr>
-      </table>
-      <br />
+<!----------------------------------JEE MAINS DETAILS TABLE STARTS-----------------------------> 
 
-      <p>
-        <b>Whether Hostel required or not: </b>
-        <input type="radio" id="hy" name="hy" value="Yes" />Yes
-        <input type="radio" id="hn" name="hn" value="No" />No
-      </p>
 
-      <h4><u>List of enclosures</u></h4>
+    <h4><u>JEE Mains details: </u></h4>
+    <table border="1" cellpadding="4">
+        <tr>
+            <td>Round Allotment</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>JEE roll number</td>
+            <td>
+                <label for="jeeroll"></label>
+                <input type="text" name="jeeroll" id="jeeroll">
+            </td>
+        </tr>
+        <tr>
+            <td>JEE AIR</td>
+            <td>
+                <label for="generalrank">General</label>
+                <input type="text">
+                <label for="categoryrank">Category(If applicable)</label>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>Allotment Category: </td>
+            <td>
+                <label for="category"></label>
+                <select name="category" id="category">
+                    <option value="Open">Open</option>
+                    <option value="OBC">OBC</option>
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>
+                    <option value="PWD">PWD</option>
+                    <option value="EWS">EWS</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <br><br>
 
-      <table cellpadding="4" border="1">
-        <tr>
-          <td>1) Seat allotment letter</td>
-          <td>
-            <input type="radio" id="saly" name="saly" value="Yes" />Yes
-            <input type="radio" id="saln" name="saln" value="No" />No
-          </td>
-          <td>8) Caste Certificate</td>
-          <td>
-            <input type="radio" id="ccy" name="ccy" value="Yes" />Yes
-            <input type="radio" id="ccn" name="ccn" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>2) JEE rank card</td>
-          <td>
-            <input type="radio" id="jeercy" name="jeercy" value="Yes" />Yes
-            <input type="radio" id="jeercn" name="jeercn" value="No" />No
-          </td>
-          <td>9) Caste validity</td>
-          <td>
-            <input type="radio" id="cvy" name="cvy" value="Yes" />Yes
-            <input type="radio" id="cvn" name="cvn" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>3) Photo ID proof</td>
-          <td>
-            <input type="radio" id="pidy" name="pidy" value="Yes" />Yes
-            <input type="radio" id="pidn" name="pidn" value="No" />No
-          </td>
-          <td>10) Non-Creamy layer certificate</td>
-          <td>
-            <input type="radio" id="ncly" name="ncly" value="Yes" />Yes
-            <input type="radio" id="ncln" name="ncln" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>4) Certificate of date of birth</td>
-          <td>
-            <input type="radio" id="dobcy" name="dobcy" value="Yes" />Yes
-            <input type="radio" id="dobcn" name="dobcn" value="No" />No
-          </td>
-          <td>11) Certificate for persons with disabilities</td>
-          <td>
-            <input type="radio" id="pwdcy" name="pwdcy" value="Yes" />Yes
-            <input type="radio" id="pwdcn" name="pwdcn" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>5) Qualifying Examination Mark-Sheet</td>
-          <td>
-            <input type="radio" id="marksy" name="marksy" value="Yes" />Yes
-            <input type="radio" id="marksn" name="marksn" value="No" />No
-          </td>
-          <td>12) Transfer Certificate</td>
-          <td>
-            <input type="radio" id="tcy" name="tcy" value="Yes" />Yes
-            <input type="radio" id="tcn" name="tcn" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>6) Income certificate (For EWS)</td>
-          <td>
-            <input type="radio" id="icy" name="icy" value="Yes" />Yes
-            <input type="radio" id="icn" name="icn" value="No" />No
-          </td>
-          <td>13) Migration Certificate</td>
-          <td>
-            <input type="radio" id="mcy" name="mcy" value="Yes" />Yes
-            <input type="radio" id="mcn" name="mcn" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>7) Aadhar card</td>
-          <td>
-            <input type="radio" id="acy" name="acy" value="Yes" />Yes
-            <input type="radio" id="acn" name="acn" value="No" />No
-          </td>
-          <td>14) Gap certificate</td>
-          <td>
-            <input type="radio" id="gcy" name="gcy" value="Yes" />Yes
-            <input type="radio" id="gcn" name="gcn" value="No" />No
-          </td>
-        </tr>
-      </table>
+<!----------------------------------FEE PAYMENT DETAILS-----------------------------> 
 
-      <h4><u>Address Information</u></h4>
-      <table cellpadding="4" border="1">
+    <h4><u>Details of Fee payment: </u></h4>
+    <table border="1" cellpadding="4">
         <tr>
-          <td>Address for correspondence</td>
-          <td>Permanent Address</td>
+            <td>Sr. No</td>
+            <td>Details</td>
+            <td>DD/ECS no.</td>
+            <td>Date</td>
+            <td>Amount</td>
         </tr>
         <tr>
-          <td>
-            <label for="addr"></label
-            ><input type="text" name="addr" id="addr" />
-          </td>
-          <td>
-            <label for="paddr"></label
-            ><input type="text" name="paddr" id="paddr" />
-          </td>
+            <td>1.</td>
+            <td>JOSAA 2021 councilling</td>
+            <td><label for="a"></label><input type="text" id="a" name="a"></td>
+            <td><label for="b"></label><input type="text" id="b" name="b"></td>
+            <td><label for="c"></label><input type="text" id="c" name="c"></td>
         </tr>
         <tr>
-          <td>
-            <label for="city">City: </label
-            ><input type="text" name="city" id="city" />
-          </td>
-          <td>
-            <label for="pcity">City: </label
-            ><input type="text" name="pcity" id="pcity" />
-          </td>
+            <td>2.</td>
+            <td>At institute while reporting</td>
+            <td><label for="d"></label><input type="text" id="d" name="d"></td>
+            <td><label for="e"></label><input type="text" id="e" name="e"></td>
+            <td><label for="f"></label><input type="text" id="f" name="f"></td>
         </tr>
         <tr>
-          <td>
-            <label for="state">State: </label
-            ><input type="text" name="state" id="state" />
-          </td>
-          <td>
-            <label for="pstate">State: </label
-            ><input type="text" name="pstate" id="pstate" />
-          </td>
+            <td>3.</td>
+            <td><b>Total Amount</b></td>
+            <td><label for="g"></label><input type="text" id="g" name="g"></td>
+            <td><label for="h"></label><input type="text" id="h" name="h"></td>
+            <td><label for="i"></label><input type="text" id="i" name="i"></td>
         </tr>
-        <tr>
-          <td>
-            <label for="pin">PIN: </label
-            ><input type="text" name="pin" id="pin" />
-          </td>
-          <td>
-            <label for="ppin">PIN: </label
-            ><input type="text" name="ppin" id="ppin" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="rcon">Residential contact: </label
-            ><input type="text" name="rcon" id="rcon" />
-          </td>
-          <td>
-            <label for="prcon">Residential contact: </label
-            ><input type="text" name="prcon" id="prcon" />
-          </td>
-        </tr>
-      </table>
-      <br /><br />
+    </table>
+    <br>
 
-      <h4><u>Education</u></h4>
-      <table cellpadding="4" border="1">
-        <tr>
-          <td>Class</td>
-          <td>Name of Board</td>
-          <td>Subject</td>
-          <td>Year of Passing</td>
-          <td>Marks Obtained</td>
-          <td>Percentage/GPA/Grade</td>
-        </tr>
-        <tr>
-          <td>10th/SSC</td>
-          <td>
-            <label for="10board"></label
-            ><input type="text" name="10board" id="10board" />
-          </td>
-          <td>
-            <label for="10sub"></label
-            ><input type="text" name="10sub" id="10sub" />
-          </td>
-          <td>
-            <label for="10yop"></label
-            ><input type="text" name="10yop" id="10yop" />
-          </td>
-          <td>
-            <label for="10marks"></label
-            ><input type="text" name="10marks" id="10marks" />
-          </td>
-          <td>
-            <label for="10per"></label
-            ><input type="text" name="10per" id="10per" />
-          </td>
-        </tr>
-        <tr>
-          <td>12th/SSC</td>
-          <td>
-            <label for="12board"></label
-            ><input type="text" name="12board" id="12board" />
-          </td>
-          <td>
-            <label for="12sub"></label
-            ><input type="text" name="12sub" id="12sub" />
-          </td>
-          <td>
-            <label for="12yop"></label
-            ><input type="text" name="12yop" id="12yop" />
-          </td>
-          <td>
-            <label for="12marks"></label
-            ><input type="text" name="12marks" id="12marks" />
-          </td>
-          <td>
-            <label for="12per"></label
-            ><input type="text" name="12per" id="12per" />
-          </td>
-        </tr>
-      </table>
-      <br /><br />
+<!----------------------------------LIST OF ENCLOSURES-----------------------------> 
+<p>
+    <b>Whether Hostel required or not: </b>
+    <input type="radio" id="hy" name="hostelwanted" value="Yes">Yes
+    <input type="radio" id="hn" name="hostelwanted" value="No">No
+</p>
 
-      <h4><u>Uploaded Scanned Copies</u></h4>
-      <table cellpadding="4" border="1">
-        <tr>
-          <td>10th Marksheet</td>
-          <td>
-            <input type="radio" id="y1" name="y1" value="Yes" />Yes
-            <input type="radio" id="n1" name="n1" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>12th Marksheet</td>
-          <td>
-            <input type="radio" id="y2" name="y2" value="Yes" />Yes
-            <input type="radio" id="n2" name="n2" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>Aadhar</td>
-          <td>
-            <input type="radio" id="y3" name="y3" value="Yes" />Yes
-            <input type="radio" id="n3" name="n3" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>Category Certificate</td>
-          <td>
-            <input type="radio" id="y4" name="y4" value="Yes" />Yes
-            <input type="radio" id="n4" name="n4" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>PWD certificate</td>
-          <td>
-            <input type="radio" id="y5" name="y5" value="Yes" />Yes
-            <input type="radio" id="n5" name="n5" value="No" />No
-          </td>
-        </tr>
-        <tr>
-          <td>EWS certificate (If applicable)</td>
-          <td>
-            <input type="radio" id="y6" name="y6" value="Yes" />Yes
-            <input type="radio" id="n6" name="n6" value="No" />No
-          </td>
-        </tr>
-      </table>
+<h4><u>List of enclosures</u></h4>
 
-      <h4>Declaration by the applicant</h4>
-      <h4>
-        <u
-          ><b
-            >I certified that all information provided by me in this form is
-            correct to the best of my knowledge and belief. I understand that
-            any willful misrepresentation of facts will result in my dismissal
-            from the Institute. If admitted, I shall abide by all rules and
-            regulations of the Institute.</b
-          ></u
-        >
-      </h4>
-      <p>Upload scanned image of signature</p>
-      <label for="sign"><input type="file" id="sign" name="sign" /></label>
-      <br /><br />
+<table cellpadding="4" border="1">
+    <tr>
+        <td>1) Seat allotment letter</td>
+        <td>
+            <input type="radio" id="saly" name="sal" value="Yes">Yes
+            <input type="radio" id="saln" name="sal" value="No">No
+        </td>
+        <td>8) Caste Certificate</td>
+        <td>
+            <input type="radio" id="ccy" name="cc" value="Yes">Yes
+            <input type="radio" id="ccn" name="cc" value="No">No
+        </td>
+    </tr>
+    <tr>
+        <td>2) JEE rank card</td>
+        <td>
+            <input type="radio" id="jeercy" name="jeerc" value="Yes">Yes
+            <input type="radio" id="jeercn" name="jeerc" value="No">No
+        </td>
+        <td>9) Caste validity</td>
+        <td>
+            <input type="radio" id="cvy" name="cvalidity" value="Yes">Yes
+            <input type="radio" id="cvn" name="cvalidity" value="No">No
+        </td>
+    </tr>
+    <tr>
+        <td>3) Photo ID proof</td>
+        <td>
+            <input type="radio" id="pidy" name="photoid" value="Yes">Yes
+            <input type="radio" id="pidn" name="photoid" value="No">No
+        </td>
+        <td>10) Non-Creamy layer certificate</td>
+        <td>
+            <input type="radio" id="ncly" name="nclcert" value="Yes">Yes
+            <input type="radio" id="ncln" name="nclcert" value="No">No
+        </td>
+    </tr>
+    <tr>
+        <td>4) Certificate of date of birth</td>
+        <td>
+            <input type="radio" id="dobcy" name="dobcert" value="Yes">Yes
+            <input type="radio" id="dobcn" name="dobcert" value="No">No
+        </td>
+        <td>11) Certificate for persons with disabilities</td>
+        <td>
+            <input type="radio" id="pwdcy" name="pwdcert" value="Yes">Yes
+            <input type="radio" id="pwdcn" name="pwdcert" value="No">No
+        </td>
+    </tr>
+    <tr>
+        <td>5) Qualifying Examination Mark-Sheet</td>
+        <td>
+            <input type="radio" id="marksy" name="markscert" value="Yes">Yes
+            <input type="radio" id="marksn" name="markscert" value="No">No
+        </td>
+        <td>12) Transfer Certificate</td>
+        <td>
+            <input type="radio" id="tcy" name="tccert" value="Yes">Yes
+            <input type="radio" id="tcn" name="tccert" value="No">No
+        </td>
+    </tr>
+    <tr>
+        <td>6) Income certificate (For EWS)</td>
+        <td>
+            <input type="radio" id="icy" name="icert" value="Yes">Yes
+            <input type="radio" id="icn" name="icert" value="No">No
+        </td>
+        <td>13) Migration Certificate</td>
+        <td>
+            <input type="radio" id="mcy" name="mcert" value="Yes">Yes
+            <input type="radio" id="mcn" name="mcert" value="No">No
+        </td>
+    </tr>
+    <tr>
+        <td>7) Aadhar card</td>
+        <td>
+            <input type="radio" id="acy" name="acard" value="Yes">Yes
+            <input type="radio" id="acn" name="acard" value="No">No
+        </td>
+        <td>14) Gap certificate</td>
+        <td>
+            <input type="radio" id="gcy" name="gcert" value="Yes">Yes
+            <input type="radio" id="gcn" name="gcert" value="No">No
+        </td>
+    </tr>
+</table>
 
-      <center><input type="submit" /></center>
-    </form>
-  </body>
+
+<!----------------------------------ADDRESS INFORMATION DETAILS-----------------------------> 
+
+    <h4><u>Address Information</u></h4>
+    <table cellpadding="4" border="1">
+        <tr>
+            <td>Address for correspondence</td>
+            <td>Permanent Address</td>
+        </tr>
+        <tr>
+            <td><label for="addr"></label><input type="text" name="addr" id="addr"></td>
+            <td><label for="paddr"></label><input type="text" name="paddr" id="paddr"></td>
+        </tr>
+        <tr>
+            <td><label for="city">City: </label><input type="text" name="city" id="city"></td>
+            <td><label for="pcity">City: </label><input type="text" name="pcity" id="pcity"></td>
+        </tr>
+        <tr>
+            <td><label for="state">State: </label><input type="text" name="state" id="state"></td>
+            <td><label for="pstate">State: </label><input type="text" name="pstate" id="pstate"></td>
+        </tr>
+        <tr>
+            <td><label for="pin">PIN: </label><input type="text" name="pin" id="pin"></td>
+            <td><label for="ppin">PIN: </label><input type="text" name="ppin" id="ppin"></td>
+        </tr>
+        <tr>
+            <td><label for="rcon">Residential contact: </label><input type="text" name="rcon" id="rcon"></td>
+            <td><label for="prcon">Residential contact: </label><input type="text" name="prcon" id="prcon"></td>
+        </tr>
+        
+    </table>
+    <br><br>
+
+<!----------------------------------EDUCATION DETAILS----------------------------->     
+
+    <h4><u>Education</u></h4>
+    <table cellpadding="4" border="1">
+        <tr>
+            <td>Class</td>
+            <td>Name of Board</td>
+            <td>Subject</td>
+            <td>Year of Passing</td>
+            <td>Marks Obtained</td>
+            <td>Percentage/GPA/Grade</td>
+        </tr>
+        <tr>
+            <td>10th/SSC</td>
+            <td><label for="10board"></label><input type="text" name="10board" id="10board"></td>
+            <td><label for="10sub"></label><input type="text" name="10sub" id="10sub"></td>
+            <td><label for="10yop"></label><input type="text" name="10yop" id="10yop"></td>
+            <td><label for="10marks"></label><input type="text" name="10marks" id="10marks"></td>
+            <td><label for="10per"></label><input type="text" name="10per" id="10per"></td>
+        </tr>
+        <tr>
+            <td>12th/SSC</td>
+            <td><label for="12board"></label><input type="text" name="12board" id="12board"></td>
+            <td><label for="12sub"></label><input type="text" name="12sub" id="12sub"></td>
+            <td><label for="12yop"></label><input type="text" name="12yop" id="12yop"></td>
+            <td><label for="12marks"></label><input type="text" name="12marks" id="12marks"></td>
+            <td><label for="12per"></label><input type="text" name="12per" id="12per"></td>
+        </tr>
+    </table>
+    <br><br>
+
+
+<!----------------------------------UPLOADED SCANNED COPIES-----------------------------> 
+
+    <h4><u>Uploaded Scanned Copies</u></h4>
+    <table cellpadding="4" border="1">
+        <tr>
+            <td>10th Marksheet</td>
+            <td><input type="radio" id="y1" name="y1" value="Yes">Yes
+            <input type="radio" id="n1" name="y1" value="No">No</td>
+        </tr>
+        <tr>
+            <td>12th Marksheet</td>
+            <td><input type="radio" id="y2" name="y2" value="Yes">Yes
+                <input type="radio" id="n2" name="y2" value="No">No</td>
+        </tr>
+        <tr>
+            <td>Aadhar</td>
+            <td><input type="radio" id="y3" name="y3" value="Yes">Yes
+                <input type="radio" id="n3" name="y3" value="No">No</td>
+        </tr>
+        <tr>
+            <td>Category Certificate</td>
+            <td><input type="radio" id="y4" name="y4" value="Yes">Yes
+                <input type="radio" id="n4" name="y4" value="No">No</td>
+        </tr>
+        <tr>
+            <td>PWD certificate</td>
+            <td><input type="radio" id="y5" name="y5" value="Yes">Yes
+                <input type="radio" id="n5" name="y5" value="No">No</td>
+        </tr>
+        <tr>
+            <td>EWS certificate (If applicable)</td>
+            <td><input type="radio" id="y6" name="y6" value="Yes">Yes
+                <input type="radio" id="n6" name="y6" value="No">No</td>
+        </tr>
+    </table>
+
+
+<!----------------------------------DECLARATION----------------------------->     
+
+    <h4>Declaration by the applicant</h4>
+    <h4><u><b>I certified that all information provided by me in this form is correct to the best of my knowledge and belief. I understand that any willful misrepresentation of facts will result in my dismissal from the Institute. If admitted, I shall abide by all rules and regulations of the Institute.</b></u></h4>
+    <p>Upload scanned image of signature</p>
+    <label for="sign"><input type="file" id="sign" name="sign"></label>
+    <br><br>
+
+    <center><input type="submit"></center>
+
+    
+</form>
+</body>
+ 	
+  
 </html>

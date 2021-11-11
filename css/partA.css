@@ -10,6 +10,7 @@ body {
 table {
     width: 100%;
     border: 1px solid black;
+    letter-spacing: 1px;
     border-collapse: collapse;
 }
 
@@ -23,4 +24,17 @@ td {
     border: 1px solid black;
     padding: 10px;
     text-align: center
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope="row"] {
+    background-color: #d7d9f2;
 }
