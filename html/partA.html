@@ -6,7 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DBMS Mini Project</title>
     <link rel="stylesheet" href="../css/partA.css" />
-    <script src="../javascript/app.js"></script>
+    <script>
+      function validateFormA() {
+        var errormessage = "";
+
+        var x = document.getElementById("AcademicYear").value;
+        if (x == "" || y == null) {
+          errormessage += "Academic Year must be filled out \n";
+          document.getElementById("AcademicYear").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("Semester").value;
+        if (x == "" || y == null) {
+          errormessage += "Semester must be filled out \n";
+          document.getElementById("Semester").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("dof").value;
+        if (x == "" || y == null) {
+          errormessage += "Date Of Feedback must be filled out \n";
+          document.getElementById("dof").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("Branch").value;
+        if (x == "" || y == null) {
+          errormessage += "Branch must be filled out \n";
+          document.getElementById("Branch").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("Section").value;
+        if (x == "" || y == null) {
+          errormessage += "Section must be filled out \n";
+          document.getElementById("Section").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("sub1").value;
+        if (x == "" || y == null) {
+          errormessage += "Subject 1 must be filled out \n";
+          document.getElementById("sub1").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("sub2").value;
+        if (x == "" || y == null) {
+          errormessage += "Subject 2 must be filled out \n";
+          document.getElementById("sub2").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("sub3").value;
+        if (x == "" || y == null) {
+          errormessage += "Subject 3 must be filled out \n";
+          document.getElementById("sub3").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("sub4").value;
+        if (x == "" || y == null) {
+          errormessage += "Subject 4 must be filled out \n";
+          document.getElementById("sub4").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("sub5").value;
+        if (x == "" || y == null) {
+          errormessage += "Subject 5 must be filled out \n";
+          document.getElementById("sub5").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("sub6").value;
+        if (x == "" || y == null) {
+          errormessage += "Subject 6 must be filled out \n";
+          document.getElementById("sub6").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("AttendancePer").value;
+        if (x == "" || y == null) {
+          errormessage += "Attendance Percentage must be filled out \n";
+          document.getElementById("AttendancePer").style.borderColor = "red";
+        }
+
+        var x = document.getElementById("CGPA").value;
+        if (x == "" || y == null) {
+          errormessage += "CGPA must be filled out \n";
+          document.getElementById("CGPA").style.borderColor = "red";
+        }
+
+        if (errormessage != "") {
+          alert(errormessage);
+          return false;
+        } else {
+          /*document.getElementById("theform").submit();*/
+          return true;
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -14,7 +104,11 @@
       <center>Part I - Feedback System</center>
     </h1>
     <hr />
-    <form>
+    <form
+      action="../php/partA.php"
+      method="post"
+      onsubmit="return validateFormA()"
+    >
       <label for="AcademicYear">Academic Year:</label>
       <input type="text" id="AcademicYear" name="AcademicYear" />
       <label for="Semester">Semester:</label>
@@ -549,6 +643,7 @@
       <input type="text" id="CGPA" name="CGPA" />
       <br />
       <br />
+      <input type="submit" value="Submit" />
     </form>
   </body>
 </html>

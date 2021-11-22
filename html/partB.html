@@ -6,399 +6,1043 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DBMS Mini Project</title>
     <link rel="stylesheet" href="../css/partB.css" />
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DBMS Mini Project</title>
+    <link rel="stylesheet" href="../css/partB.css" />
+    <script>
+	
+	function validateForm() {
+        	var errormessage = "";
+  			
+            var x = document.getElementById('fname').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Name must be filled out \n";
+                document.getElementById('fname').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('dob').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Date of Birth must be filled out \n";
+                document.getElementById('dob').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('contact').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Mobile number must be filled out \n";
+                document.getElementById('contact').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('emcontact').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Emergency phone number must be filled out \n";
+                document.getElementById('emcontact').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('email').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Email must be filled out \n";
+                document.getElementById('email').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('aadhar').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Aadhar must be filled out \n";
+                document.getElementById('aadhar').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('faname').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Father's name must be filled out \n";
+                document.getElementById('faname').style.borderColor="red";
+          	}
+    		
+            var x = document.getElementById('foccupation').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Father's occupation must be filled out \n";
+                document.getElementById('foccupation').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('moname').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Mother's name must be filled out \n";
+                document.getElementById('moname').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('moccupation').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Mother's occupation must be filled out \n";
+                document.getElementById('moccupation').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('dis').value;
+			
+			var x = document.getElementById('roundno').value;
+  			if (x == "" || x == null) {
+    			errormessage += "JEE Round number must be filled out \n";
+                document.getElementById('roundno').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('jeeroll').value;
+  			if (x == "" || x == null) {
+    			errormessage += "JEE Roll number must be filled out \n";
+                document.getElementById('jeeroll').style.borderColor="red";
+          	}
+            
+			var x = document.getElementById('genrank').value;
+  			if (x == "" || x == null) {
+    			errormessage += "JEE General Rank must be filled out \n";
+                document.getElementById('genrank').style.borderColor="red";
+          	}
+			
+            var x = document.getElementById('a').value;
+  			if (x == "" || x == null) {
+    			errormessage += "DD/ECS must be filled out \n";
+                document.getElementById('a').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('b').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Date must be filled out \n";
+                document.getElementById('b').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('c').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Amount must be filled out \n";
+                document.getElementById('c').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('d').value;
+  			if (x == "" || x == null) {
+    			errormessage += "DD/ECS must be filled out \n";
+                document.getElementById('d').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('e').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Date must be filled out \n";
+                document.getElementById('e').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('f').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Amount must be filled out \n";
+                document.getElementById('f').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('g').value;
+  			if (x == "" || x == null) {
+    			errormessage += "DD/ECS must be filled out \n";
+                document.getElementById('g').style.borderColor="red";
+          	}
+            
+            var rbs = document.querySelectorAll('input[name="hostelwanted"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Hostel required or not must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="sal"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Seat allotment letter must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="cc"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Caste certificate must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="jeerc"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "JEE rak card must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="cvalidity"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Caste validity letter must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="photoid"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Photo ID proof must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="nclcert"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Non-Creamy layer certificate must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="dobcert"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Certificate of Date of Birth must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="pwdcert"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Certificate for persons with disabilities must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="markscert"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Qualifying Examination Mark-Sheet must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="tccert"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Transfer Certificate must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="icert"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Income certificate (For EWS) must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="mcert"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Migration certificate must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="acard"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Aadhar Card must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="gcert"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Gap certificate must be filled out \n";
+            }
+            
+            var x = document.getElementById('addr').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Address for correspondence must be filled out \n";
+                document.getElementById('addr').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('city').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Address for correspondence's City must be filled out \n";
+                document.getElementById('city').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('state').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Address for correspondence's State must be filled out \n";
+                document.getElementById('state').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('pin').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Address for correspondence's PIN must be filled out \n";
+                document.getElementById('pin').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('rcon').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Address for correspondence phone number must be filled out \n";
+                document.getElementById('rcon').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('paddr').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Permanent Address must be filled out \n";
+                document.getElementById('paddr').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('pcity').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Permanent Address City must be filled out \n";
+                document.getElementById('pcity').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('pstate').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Permanent Address State must be filled out \n";
+                document.getElementById('pstate').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('ppin').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Permanent Address PIN must be filled out \n";
+                document.getElementById('ppin').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('prcon').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Permanent Address phone number must be filled out \n";
+                document.getElementById('prcon').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('10board').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Class 10th Name of Boards must be filled out \n";
+                document.getElementById('10board').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('10sub').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Class 10th Subjects must be filled out \n";
+                document.getElementById('10sub').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('10yop').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Class 10th Year of passing must be filled out \n";
+                document.getElementById('10yop').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('10marks').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Class 10th Marks Obtained must be filled out \n";
+                document.getElementById('10marks').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('10per').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Class 10th Percentage/grade/GPA must be filled out \n";
+                document.getElementById('10per').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('12board').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Class 12th Name of Boards must be filled out \n";
+                document.getElementById('12board').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('12sub').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Class 12th Subjects must be filled out \n";
+                document.getElementById('12sub').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('12yop').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Class 12th Year of passing must be filled out \n";
+                document.getElementById('12yop').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('12marks').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Class 12th Marks Obtained must be filled out \n";
+                document.getElementById('12marks').style.borderColor="red";
+          	}
+            
+            var x = document.getElementById('12per').value;
+  			if (x == "" || x == null) {
+    			errormessage += "Class 12th Percentage/grade/GPA must be filled out \n";
+                document.getElementById('12per').style.borderColor="red";
+          	}
+            
+            var rbs = document.querySelectorAll('input[name="y1"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "10th Marksheet must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="y2"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "12th Marksheet must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="y3"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Aadhar must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="y4"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "Category Certificate must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="y5"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "PWD Certificate must be filled out \n";
+            }
+            
+            var rbs = document.querySelectorAll('input[name="y6"]');
+            var qwerty = 0;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                	qwerty = 0;
+                    break;
+                }
+                else {
+                	qwerty = 1;
+                }
+            }
+            if (qwerty ==1 ){
+            	errormessage += "EWS Certificate must be filled out \n";
+            }
+          
+            
+            
+            if ( errormessage != "" ){
+            	alert(errormessage)
+                return false;
+            }
+			else {
+				/*document.getElementById("theform").submit();*/
+				return true;
+			}
+		}
+	
+	</script>
+    
   </head>
+
   <body>
-    <h2><center><u>Application form for admission to B.Tech Programme</u></center></h2>
-    <p style="font-size: 18px;">Enter Details from here onwards <u>(ALL ENTRIES IN CAPITAL LETTERS)</u></p>
-<form action="/action.php">
+    <h2>
+      <center><u>Application form for admission to B.Tech Programme</u></center>
+    </h2>
+    <p style="font-size: 18px">
+      Enter Details from here onwards <u>(ALL ENTRIES IN CAPITAL LETTERS)</u>
+    </p>
+    <form action="../php/partB.php" method="post" onsubmit="return validateForm()">
+      <label for="profile"> Upload recent photo: </label>
+      <input type="file" id="profile" name="profile" />
+      <br /><br />
 
-<!----------------------------------INITIAL FORM STARTS----------------------------->     
+      <label for="fname"> Name in English: </label>
+      <input type="text" id="fname" name="fname" />
+      <br /><br />
 
-    <label for="profile"> Upload recent photo: </label>
-    <input type="file" id="profile" name="profile">
-    <br><br>
-    
-    <label for="fname" > Name in English: </label>
-    <input type="text" id="fname" name="fname"> 
-    <br><br>
-    
-
-    <table cellpadding="4">   
+      <table cellpadding="4">
         <tr>
-            <td>
-                <label for="gender">Gender: </label>
-                <select name="gender" id="gender">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-                <br><br>
-            </td>
+          <td>
+            <label for="gender">Gender: </label>
+            <select name="gender" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <br /><br />
+          </td>
 
-            <td>
-                <label for="blood">Blood group: </label>
-                <select name="blood" id="blood">
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
-                </select>
-                <br><br>
-            </td>
+          <td>
+            <label for="blood">Blood group: </label>
+            <select name="blood" id="blood">
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+            <br /><br />
+          </td>
         </tr>
-    </table>
+      </table>
 
-    <label for="dob">Date of Birth: </label>
-    <input type="date" id = "dob" name="dob">
-    <br><br>
+      <label for="dob">Date of Birth: </label>
+      <input type="date" id="dob" name="dob" />
+      <br /><br />
 
-    <label for="contact">Mobile number: </label>
-    <input type="text" id="contact" name="contact">
-    <br><br>
+      <label for="contact">Mobile number: </label>
+      <input type="text" id="contact" name="contact" />
+      <br /><br />
 
-    <label for="emcontact">Emergency number: </label>
-    <input type="text" id="emcontact" name="emcontact">
-    <br><br>
+      <label for="emcontact">Emergency number: </label>
+      <input type="text" id="emcontact" name="emcontact" />
+      <br /><br />
 
-    <label for="email">Email: </label>
-    <input type="text" id="email" name="email">
-    <br><br>
+      <label for="email">Email: </label>
+      <input type="text" id="email" name="email" />
+      <br /><br />
 
-    <label for="aadhar">Aadhar: </label>
-    <input type="text" id="email" name="email">
-    <br><br>
+      <label for="aadhar">Aadhar: </label>
+      <input type="text" id="aadhar" name="aadhar" />
+      <br /><br />
 
-    <table cellpadding="4" bordercolor="black" border="1">
+      <table cellpadding="4" bordercolor="black" border="1">
         <tr>
-            <td>
+          <td>
             <label for="faname">Father's name: </label>
-            <input type="text" id="faname" name="faname">
-            </td>
-            <td>
-                <label for="foccupation">Occupation: </label>
-                <input type="text" name="foccupation" id="foccupation">
-            </td>
+            <input type="text" id="faname" name="faname" />
+          </td>
+          <td>
+            <label for="foccupation">Occupation: </label>
+            <input type="text" name="foccupation" id="foccupation" />
+          </td>
         </tr>
         <tr>
-            <td>
-                <label for="moname">Mother's name: </label>
-                <input type="text" id="moname" name="moname">
-                </td>
-                <td>
-                    <label for="moccupation">Occupation: </label>
-                    <input type="text" name="moccupation" id="moccupation">
-                </td>
+          <td>
+            <label for="moname">Mother's name: </label>
+            <input type="text" id="moname" name="moname" />
+          </td>
+          <td>
+            <label for="moccupation">Occupation: </label>
+            <input type="text" name="moccupation" id="moccupation" />
+          </td>
         </tr>
-    </table>
-    <br><br>
+      </table>
+      <br /><br />
 
-    <label for="branch">Branch: </label>
-    <select name="branch" id="branch">
+      <label for="branch">Branch: </label>
+      <select name="branch" id="branch">
         <option value="cse">CSE</option>
         <option value="ece">ECE</option>
-    </select>
-    <br><br>
-    <label for="dis">Physical Disability: </label>
-    <select name="dis" id="dis">
+      </select>
+      <br /><br />
+      <label for="dis">Physical Disability: </label>
+      <select name="dis" id="dis">
         <option value="Y">Yes</option>
         <option value="N">No</option>
-    </select>
-    <label for="discert">If Yes,attach verification report by IIITN committee.</label>
-    <input type="file" id="discert" name="discert">
-    <br><br>
+      </select>
+      <label for="discert"
+        >If Yes,attach verification report by IIITN committee.</label
+      >
+      <input type="file" id="discert" name="discert" />
+      <br /><br />
 
+      <h4><u>JEE Mains details: </u></h4>
+      <table border="1" cellpadding="4">
+        <tr>
+          <td>Round number</td>
+          <td><input type="text" name="roundno" id="roundno" /></td>
+        </tr>
+        <tr>
+          <td>JEE roll number</td>
+          <td>
+            <label for="jeeroll"></label>
+            <input type="text" name="jeeroll" id="jeeroll" />
+          </td>
+        </tr>
+        <tr>
+          <td>JEE AIR</td>
+          <td>
+            <label for="generalrank">General</label>
+            <input type="text" name="genrank" id="genrank" />
+            <label for="categoryrank">Category(If applicable)</label>
+            <input type="text" name="catrank" id="catrank" />
+          </td>
+        </tr>
+        <tr>
+          <td>Allotment Category:</td>
+          <td>
+            <label for="category"></label>
+            <select name="category" id="category">
+              <option value="Open">Open</option>
+              <option value="OBC">OBC</option>
+              <option value="SC">SC</option>
+              <option value="ST">ST</option>
+              <option value="PWD">PWD</option>
+              <option value="EWS">EWS</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <br /><br />
 
-<!----------------------------------JEE MAINS DETAILS TABLE STARTS-----------------------------> 
+      <h4><u>Details of Fee payment: </u></h4>
+      <table border="1" cellpadding="4">
+        <tr>
+          <td>Sr. No</td>
+          <td>Details</td>
+          <td>DD/ECS no.</td>
+          <td>Date</td>
+          <td>Amount</td>
+        </tr>
+        <tr>
+          <td>1.</td>
+          <td>JOSAA 2021 councilling</td>
+          <td><label for="a"></label><input type="text" id="a" name="a" /></td>
+          <td><label for="b"></label><input type="date" id="b" name="b" /></td>
+          <td><label for="c"></label><input type="text" id="c" name="c" /></td>
+        </tr>
+        <tr>
+          <td>2.</td>
+          <td>At institute while reporting</td>
+          <td><label for="d"></label><input type="text" id="d" name="d" /></td>
+          <td><label for="e"></label><input type="date" id="e" name="e" /></td>
+          <td><label for="f"></label><input type="text" id="f" name="f" /></td>
+        </tr>
+        <tr>
+          <td>3.</td>
+          <td><b>Total Amount</b></td>
+          <td></td>
+          <td></td>
+          <td><label for="g"></label><input type="text" id="g" name="g" /></td>
+        </tr>
+      </table>
+      <br />
 
+      <p>
+        <b>Whether Hostel required or not: </b>
+        <input type="radio" id="hy" name="hostelwanted" value="Yes" />Yes
+        <input type="radio" id="hn" name="hostelwanted" value="No" />No
+      </p>
 
-    <h4><u>JEE Mains details: </u></h4>
-    <table border="1" cellpadding="4">
-        <tr>
-            <td>Round Allotment</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>JEE roll number</td>
-            <td>
-                <label for="jeeroll"></label>
-                <input type="text" name="jeeroll" id="jeeroll">
-            </td>
-        </tr>
-        <tr>
-            <td>JEE AIR</td>
-            <td>
-                <label for="generalrank">General</label>
-                <input type="text">
-                <label for="categoryrank">Category(If applicable)</label>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td>Allotment Category: </td>
-            <td>
-                <label for="category"></label>
-                <select name="category" id="category">
-                    <option value="Open">Open</option>
-                    <option value="OBC">OBC</option>
-                    <option value="SC">SC</option>
-                    <option value="ST">ST</option>
-                    <option value="PWD">PWD</option>
-                    <option value="EWS">EWS</option>
-                </select>
-            </td>
-        </tr>
-    </table>
-    <br><br>
+      <h4><u>List of enclosures</u></h4>
 
-<!----------------------------------FEE PAYMENT DETAILS-----------------------------> 
+      <table cellpadding="4" border="1">
+        <tr>
+          <td>1) Seat allotment letter</td>
+          <td>
+            <input type="radio" id="saly" name="sal" value="Yes" />Yes
+            <input type="radio" id="saln" name="sal" value="No" />No
+          </td>
+          <td>8) Caste Certificate</td>
+          <td>
+            <input type="radio" id="ccy" name="cc" value="Yes" />Yes
+            <input type="radio" id="ccn" name="cc" value="No" />No
+          </td>
+        </tr>
+        <tr>
+          <td>2) JEE rank card</td>
+          <td>
+            <input type="radio" id="jeercy" name="jeerc" value="Yes" />Yes
+            <input type="radio" id="jeercn" name="jeerc" value="No" />No
+          </td>
+          <td>9) Caste validity</td>
+          <td>
+            <input type="radio" id="cvy" name="cvalidity" value="Yes" />Yes
+            <input type="radio" id="cvn" name="cvalidity" value="No" />No
+          </td>
+        </tr>
+        <tr>
+          <td>3) Photo ID proof</td>
+          <td>
+            <input type="radio" id="pidy" name="photoid" value="Yes" />Yes
+            <input type="radio" id="pidn" name="photoid" value="No" />No
+          </td>
+          <td>10) Non-Creamy layer certificate</td>
+          <td>
+            <input type="radio" id="ncly" name="nclcert" value="Yes" />Yes
+            <input type="radio" id="ncln" name="nclcert" value="No" />No
+          </td>
+        </tr>
+        <tr>
+          <td>4) Certificate of date of birth</td>
+          <td>
+            <input type="radio" id="dobcy" name="dobcert" value="Yes" />Yes
+            <input type="radio" id="dobcn" name="dobcert" value="No" />No
+          </td>
+          <td>11) Certificate for persons with disabilities</td>
+          <td>
+            <input type="radio" id="pwdcy" name="pwdcert" value="Yes" />Yes
+            <input type="radio" id="pwdcn" name="pwdcert" value="No" />No
+          </td>
+        </tr>
+        <tr>
+          <td>5) Qualifying Examination Mark-Sheet</td>
+          <td>
+            <input type="radio" id="marksy" name="markscert" value="Yes" />Yes
+            <input type="radio" id="marksn" name="markscert" value="No" />No
+          </td>
+          <td>12) Transfer Certificate</td>
+          <td>
+            <input type="radio" id="tcy" name="tccert" value="Yes" />Yes
+            <input type="radio" id="tcn" name="tccert" value="No" />No
+          </td>
+        </tr>
+        <tr>
+          <td>6) Income certificate (For EWS)</td>
+          <td>
+            <input type="radio" id="icy" name="icert" value="Yes" />Yes
+            <input type="radio" id="icn" name="icert" value="No" />No
+          </td>
+          <td>13) Migration Certificate</td>
+          <td>
+            <input type="radio" id="mcy" name="mcert" value="Yes" />Yes
+            <input type="radio" id="mcn" name="mcert" value="No" />No
+          </td>
+        </tr>
+        <tr>
+          <td>7) Aadhar card</td>
+          <td>
+            <input type="radio" id="acy" name="acard" value="Yes" />Yes
+            <input type="radio" id="acn" name="acard" value="No" />No
+          </td>
+          <td>14) Gap certificate</td>
+          <td>
+            <input type="radio" id="gcy" name="gcert" value="Yes" />Yes
+            <input type="radio" id="gcn" name="gcert" value="No" />No
+          </td>
+        </tr>
+      </table>
 
-    <h4><u>Details of Fee payment: </u></h4>
-    <table border="1" cellpadding="4">
+      <h4><u>Address Information</u></h4>
+      <table cellpadding="4" border="1">
         <tr>
-            <td>Sr. No</td>
-            <td>Details</td>
-            <td>DD/ECS no.</td>
-            <td>Date</td>
-            <td>Amount</td>
+          <td>Address for correspondence</td>
+          <td>Permanent Address</td>
         </tr>
         <tr>
-            <td>1.</td>
-            <td>JOSAA 2021 councilling</td>
-            <td><label for="a"></label><input type="text" id="a" name="a"></td>
-            <td><label for="b"></label><input type="text" id="b" name="b"></td>
-            <td><label for="c"></label><input type="text" id="c" name="c"></td>
+          <td>
+            <label for="addr"></label
+            ><input type="text" name="addr" id="addr" />
+          </td>
+          <td>
+            <label for="paddr"></label
+            ><input type="text" name="paddr" id="paddr" />
+          </td>
         </tr>
         <tr>
-            <td>2.</td>
-            <td>At institute while reporting</td>
-            <td><label for="d"></label><input type="text" id="d" name="d"></td>
-            <td><label for="e"></label><input type="text" id="e" name="e"></td>
-            <td><label for="f"></label><input type="text" id="f" name="f"></td>
+          <td>
+            <label for="city">City: </label
+            ><input type="text" name="city" id="city" />
+          </td>
+          <td>
+            <label for="pcity">City: </label
+            ><input type="text" name="pcity" id="pcity" />
+          </td>
         </tr>
         <tr>
-            <td>3.</td>
-            <td><b>Total Amount</b></td>
-            <td><label for="g"></label><input type="text" id="g" name="g"></td>
-            <td><label for="h"></label><input type="text" id="h" name="h"></td>
-            <td><label for="i"></label><input type="text" id="i" name="i"></td>
+          <td>
+            <label for="state">State: </label
+            ><input type="text" name="state" id="state" />
+          </td>
+          <td>
+            <label for="pstate">State: </label
+            ><input type="text" name="pstate" id="pstate" />
+          </td>
         </tr>
-    </table>
-    <br>
+        <tr>
+          <td>
+            <label for="pin">PIN: </label
+            ><input type="text" name="pin" id="pin" />
+          </td>
+          <td>
+            <label for="ppin">PIN: </label
+            ><input type="text" name="ppin" id="ppin" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="rcon">Residential contact: </label
+            ><input type="text" name="rcon" id="rcon" />
+          </td>
+          <td>
+            <label for="prcon">Residential contact: </label
+            ><input type="text" name="prcon" id="prcon" />
+          </td>
+        </tr>
+      </table>
+      <br /><br />
 
-<!----------------------------------LIST OF ENCLOSURES-----------------------------> 
-<p>
-    <b>Whether Hostel required or not: </b>
-    <input type="radio" id="hy" name="hostelwanted" value="Yes">Yes
-    <input type="radio" id="hn" name="hostelwanted" value="No">No
-</p>
-
-<h4><u>List of enclosures</u></h4>
-
-<table cellpadding="4" border="1">
-    <tr>
-        <td>1) Seat allotment letter</td>
-        <td>
-            <input type="radio" id="saly" name="sal" value="Yes">Yes
-            <input type="radio" id="saln" name="sal" value="No">No
-        </td>
-        <td>8) Caste Certificate</td>
-        <td>
-            <input type="radio" id="ccy" name="cc" value="Yes">Yes
-            <input type="radio" id="ccn" name="cc" value="No">No
-        </td>
-    </tr>
-    <tr>
-        <td>2) JEE rank card</td>
-        <td>
-            <input type="radio" id="jeercy" name="jeerc" value="Yes">Yes
-            <input type="radio" id="jeercn" name="jeerc" value="No">No
-        </td>
-        <td>9) Caste validity</td>
-        <td>
-            <input type="radio" id="cvy" name="cvalidity" value="Yes">Yes
-            <input type="radio" id="cvn" name="cvalidity" value="No">No
-        </td>
-    </tr>
-    <tr>
-        <td>3) Photo ID proof</td>
-        <td>
-            <input type="radio" id="pidy" name="photoid" value="Yes">Yes
-            <input type="radio" id="pidn" name="photoid" value="No">No
-        </td>
-        <td>10) Non-Creamy layer certificate</td>
-        <td>
-            <input type="radio" id="ncly" name="nclcert" value="Yes">Yes
-            <input type="radio" id="ncln" name="nclcert" value="No">No
-        </td>
-    </tr>
-    <tr>
-        <td>4) Certificate of date of birth</td>
-        <td>
-            <input type="radio" id="dobcy" name="dobcert" value="Yes">Yes
-            <input type="radio" id="dobcn" name="dobcert" value="No">No
-        </td>
-        <td>11) Certificate for persons with disabilities</td>
-        <td>
-            <input type="radio" id="pwdcy" name="pwdcert" value="Yes">Yes
-            <input type="radio" id="pwdcn" name="pwdcert" value="No">No
-        </td>
-    </tr>
-    <tr>
-        <td>5) Qualifying Examination Mark-Sheet</td>
-        <td>
-            <input type="radio" id="marksy" name="markscert" value="Yes">Yes
-            <input type="radio" id="marksn" name="markscert" value="No">No
-        </td>
-        <td>12) Transfer Certificate</td>
-        <td>
-            <input type="radio" id="tcy" name="tccert" value="Yes">Yes
-            <input type="radio" id="tcn" name="tccert" value="No">No
-        </td>
-    </tr>
-    <tr>
-        <td>6) Income certificate (For EWS)</td>
-        <td>
-            <input type="radio" id="icy" name="icert" value="Yes">Yes
-            <input type="radio" id="icn" name="icert" value="No">No
-        </td>
-        <td>13) Migration Certificate</td>
-        <td>
-            <input type="radio" id="mcy" name="mcert" value="Yes">Yes
-            <input type="radio" id="mcn" name="mcert" value="No">No
-        </td>
-    </tr>
-    <tr>
-        <td>7) Aadhar card</td>
-        <td>
-            <input type="radio" id="acy" name="acard" value="Yes">Yes
-            <input type="radio" id="acn" name="acard" value="No">No
-        </td>
-        <td>14) Gap certificate</td>
-        <td>
-            <input type="radio" id="gcy" name="gcert" value="Yes">Yes
-            <input type="radio" id="gcn" name="gcert" value="No">No
-        </td>
-    </tr>
-</table>
-
-
-<!----------------------------------ADDRESS INFORMATION DETAILS-----------------------------> 
-
-    <h4><u>Address Information</u></h4>
-    <table cellpadding="4" border="1">
+      <h4><u>Education</u></h4>
+      <table cellpadding="4" border="1">
         <tr>
-            <td>Address for correspondence</td>
-            <td>Permanent Address</td>
+          <td>Class</td>
+          <td>Name of Board</td>
+          <td>Subject</td>
+          <td>Year of Passing</td>
+          <td>Marks Obtained</td>
+          <td>Percentage/GPA/Grade</td>
         </tr>
         <tr>
-            <td><label for="addr"></label><input type="text" name="addr" id="addr"></td>
-            <td><label for="paddr"></label><input type="text" name="paddr" id="paddr"></td>
+          <td>10th/SSC</td>
+          <td>
+            <label for="10board"></label
+            ><input type="text" name="10board" id="10board" />
+          </td>
+          <td>
+            <label for="10sub"></label
+            ><input type="text" name="10sub" id="10sub" />
+          </td>
+          <td>
+            <label for="10yop"></label
+            ><input type="text" name="10yop" id="10yop" />
+          </td>
+          <td>
+            <label for="10marks"></label
+            ><input type="text" name="10marks" id="10marks" />
+          </td>
+          <td>
+            <label for="10per"></label
+            ><input type="text" name="10per" id="10per" />
+          </td>
         </tr>
         <tr>
-            <td><label for="city">City: </label><input type="text" name="city" id="city"></td>
-            <td><label for="pcity">City: </label><input type="text" name="pcity" id="pcity"></td>
+          <td>12th/SSC</td>
+          <td>
+            <label for="12board"></label
+            ><input type="text" name="12board" id="12board" />
+          </td>
+          <td>
+            <label for="12sub"></label
+            ><input type="text" name="12sub" id="12sub" />
+          </td>
+          <td>
+            <label for="12yop"></label
+            ><input type="text" name="12yop" id="12yop" />
+          </td>
+          <td>
+            <label for="12marks"></label
+            ><input type="text" name="12marks" id="12marks" />
+          </td>
+          <td>
+            <label for="12per"></label
+            ><input type="text" name="12per" id="12per" />
+          </td>
         </tr>
-        <tr>
-            <td><label for="state">State: </label><input type="text" name="state" id="state"></td>
-            <td><label for="pstate">State: </label><input type="text" name="pstate" id="pstate"></td>
-        </tr>
-        <tr>
-            <td><label for="pin">PIN: </label><input type="text" name="pin" id="pin"></td>
-            <td><label for="ppin">PIN: </label><input type="text" name="ppin" id="ppin"></td>
-        </tr>
-        <tr>
-            <td><label for="rcon">Residential contact: </label><input type="text" name="rcon" id="rcon"></td>
-            <td><label for="prcon">Residential contact: </label><input type="text" name="prcon" id="prcon"></td>
-        </tr>
-        
-    </table>
-    <br><br>
+      </table>
+      <br /><br />
 
-<!----------------------------------EDUCATION DETAILS----------------------------->     
-
-    <h4><u>Education</u></h4>
-    <table cellpadding="4" border="1">
+      <h4><u>Uploaded Scanned Copies</u></h4>
+      <table cellpadding="4" border="1">
         <tr>
-            <td>Class</td>
-            <td>Name of Board</td>
-            <td>Subject</td>
-            <td>Year of Passing</td>
-            <td>Marks Obtained</td>
-            <td>Percentage/GPA/Grade</td>
+          <td>10th Marksheet</td>
+          <td>
+            <input type="radio" id="y1" name="y1" value="Yes" />Yes
+            <input type="radio" id="n1" name="y1" value="No" />No
+          </td>
         </tr>
         <tr>
-            <td>10th/SSC</td>
-            <td><label for="10board"></label><input type="text" name="10board" id="10board"></td>
-            <td><label for="10sub"></label><input type="text" name="10sub" id="10sub"></td>
-            <td><label for="10yop"></label><input type="text" name="10yop" id="10yop"></td>
-            <td><label for="10marks"></label><input type="text" name="10marks" id="10marks"></td>
-            <td><label for="10per"></label><input type="text" name="10per" id="10per"></td>
+          <td>12th Marksheet</td>
+          <td>
+            <input type="radio" id="y2" name="y2" value="Yes" />Yes
+            <input type="radio" id="n2" name="y2" value="No" />No
+          </td>
         </tr>
         <tr>
-            <td>12th/SSC</td>
-            <td><label for="12board"></label><input type="text" name="12board" id="12board"></td>
-            <td><label for="12sub"></label><input type="text" name="12sub" id="12sub"></td>
-            <td><label for="12yop"></label><input type="text" name="12yop" id="12yop"></td>
-            <td><label for="12marks"></label><input type="text" name="12marks" id="12marks"></td>
-            <td><label for="12per"></label><input type="text" name="12per" id="12per"></td>
-        </tr>
-    </table>
-    <br><br>
-
-
-<!----------------------------------UPLOADED SCANNED COPIES-----------------------------> 
-
-    <h4><u>Uploaded Scanned Copies</u></h4>
-    <table cellpadding="4" border="1">
-        <tr>
-            <td>10th Marksheet</td>
-            <td><input type="radio" id="y1" name="y1" value="Yes">Yes
-            <input type="radio" id="n1" name="y1" value="No">No</td>
+          <td>Aadhar</td>
+          <td>
+            <input type="radio" id="y3" name="y3" value="Yes" />Yes
+            <input type="radio" id="n3" name="y3" value="No" />No
+          </td>
         </tr>
         <tr>
-            <td>12th Marksheet</td>
-            <td><input type="radio" id="y2" name="y2" value="Yes">Yes
-                <input type="radio" id="n2" name="y2" value="No">No</td>
+          <td>Category Certificate</td>
+          <td>
+            <input type="radio" id="y4" name="y4" value="Yes" />Yes
+            <input type="radio" id="n4" name="y4" value="No" />No
+          </td>
         </tr>
         <tr>
-            <td>Aadhar</td>
-            <td><input type="radio" id="y3" name="y3" value="Yes">Yes
-                <input type="radio" id="n3" name="y3" value="No">No</td>
+          <td>PWD certificate</td>
+          <td>
+            <input type="radio" id="y5" name="y5" value="Yes" />Yes
+            <input type="radio" id="n5" name="y5" value="No" />No
+          </td>
         </tr>
         <tr>
-            <td>Category Certificate</td>
-            <td><input type="radio" id="y4" name="y4" value="Yes">Yes
-                <input type="radio" id="n4" name="y4" value="No">No</td>
+          <td>EWS certificate (If applicable)</td>
+          <td>
+            <input type="radio" id="y6" name="y6" value="Yes" />Yes
+            <input type="radio" id="n6" name="y6" value="No" />No
+          </td>
         </tr>
-        <tr>
-            <td>PWD certificate</td>
-            <td><input type="radio" id="y5" name="y5" value="Yes">Yes
-                <input type="radio" id="n5" name="y5" value="No">No</td>
-        </tr>
-        <tr>
-            <td>EWS certificate (If applicable)</td>
-            <td><input type="radio" id="y6" name="y6" value="Yes">Yes
-                <input type="radio" id="n6" name="y6" value="No">No</td>
-        </tr>
-    </table>
+      </table>
 
+      <h4>Declaration by the applicant</h4>
+      <h4>
+        <u
+          ><b
+            >I certified that all information provided by me in this form is
+            correct to the best of my knowledge and belief. I understand that
+            any willful misrepresentation of facts will result in my dismissal
+            from the Institute. If admitted, I shall abide by all rules and
+            regulations of the Institute.</b
+          ></u
+        >
+      </h4>
+      <p>Upload scanned image of signature</p>
+      <label for="sign"><input type="file" id="sign" name="sign" /></label>
+      <br /><br />
 
-<!----------------------------------DECLARATION----------------------------->     
-
-    <h4>Declaration by the applicant</h4>
-    <h4><u><b>I certified that all information provided by me in this form is correct to the best of my knowledge and belief. I understand that any willful misrepresentation of facts will result in my dismissal from the Institute. If admitted, I shall abide by all rules and regulations of the Institute.</b></u></h4>
-    <p>Upload scanned image of signature</p>
-    <label for="sign"><input type="file" id="sign" name="sign"></label>
-    <br><br>
-
-    <center><input type="submit"></center>
-
-    
-</form>
-</body>
- 	
-  
+      <center><input type="submit" /></center>
+    </form>
+  </body>
 </html>
